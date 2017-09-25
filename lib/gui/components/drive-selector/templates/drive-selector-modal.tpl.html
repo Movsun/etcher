@@ -8,7 +8,7 @@
     <li class="list-group-item" ng-repeat="drive in modal.getDrives() track by drive.device"
       ng-disabled="!modal.constraints.isDriveValid(drive, modal.state.getImage())"
       ng-dblclick="modal.selectDriveAndClose(drive)"
-      ng-click="modal.toggleDrive(drive)">
+      ng-click="modal.toggleDrive(drive, $event)">
         <div>
           <h4 class="list-group-item-heading">{{ drive.description }} -
             <span class="word-keep">{{ drive.size | closestUnit }}</span>
